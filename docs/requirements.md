@@ -187,3 +187,71 @@ The complete normal correction period is therefore 48 hours from the relevant me
 - First 24 hours: member correction window.
 - Next 24 hours: administrator correction window.
 - After 48 hours: permanent lock.
+
+## 6. Meal-Day and Meal-Period Rules
+
+### 6.1 Meal-Day Definition
+
+A meal day is a configurable 24-hour period defined by the mess
+administrator.
+
+The meal day begins at the configured daily cutoff time and ends
+immediately before the same cutoff time on the following day.
+
+For example, if the cutoff is 6:00 AM:
+
+- Meal day begins at 6:00 AM.
+- Meal day ends at 5:59:59 AM the following calendar day.
+- Meals recorded during this period belong to the same meal day.
+
+The cutoff time must be configurable for each mess group.
+
+### 6.2 Meal Formats
+
+Each mess group must define its active meal format.
+
+Possible formats include:
+
+- Breakfast only
+- Lunch only
+- Dinner only
+- Breakfast and lunch
+- Lunch and dinner
+- Breakfast and dinner
+- Breakfast, lunch, and dinner
+
+The system should allow the administrator to configure which meal
+periods are active.
+
+### 6.3 Meal Records
+
+For each active meal period, a member may:
+
+- Record that they will take the meal.
+- Cancel their own meal during the member correction window.
+- View their submitted meal status.
+- View the meal status for the relevant meal day.
+
+A meal record must be associated with:
+
+- Mess group
+- Member
+- Meal day
+- Meal period
+- Record status
+- Creation time
+- Last modification time
+
+### 6.4 Meal Correction Timeline
+
+For each meal day:
+
+- During the first 24 hours, members may add, edit, or cancel their own
+  meal records.
+- After the first 24 hours, the system finalizes the submitted meal
+  records automatically.
+- During the following 24 hours, only administrators may correct meal
+  records.
+- Administrator corrections must record which administrator made the
+  change and when the change was made.
+- After 48 hours, the meal records become permanently locked.
